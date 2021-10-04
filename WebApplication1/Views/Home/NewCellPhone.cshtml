@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Cell Phones";
+}
+
+<div class="text-center">
+    <h1 class="display-4">New Cell Phones</h1>
+    <form method="post" action="@Url.Action("Add", "Home", FormMethod.Post)">
+        <div>
+            <div>Brand</div>
+            <div><input id="cellPhoneBrand" name="cellPhoneBrand" type="text" value="" /></div>
+        </div>
+        <div>
+            <div>Model</div>
+            <div><input id="cellPhoneModel" name="cellPhoneModel" type="text" value="" /></div>
+        </div>
+        <div>
+            <div>Price</div>
+            <div><input id="price" name="price" type="number" value="" /></div>
+        </div>
+        <input type="submit" value="Add CellPhone" id="btnSubmit" />
+    </form>
+</div>

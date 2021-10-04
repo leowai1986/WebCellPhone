@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Cell Phones";
+}
+
+@model IEnumerable<WebApplication1.Program.CellPhone>
+
+<div class="text-center">
+    <h1 class="display-4">Cell Phones</h1>
+    @Html.ActionLink("Add New", "NewCellPhone", "Home", null)
+    <table>
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Price</th>
+        </tr>
+        @foreach (var cellPhone in Model)
+        {
+            <tr>
+                <td>@cellPhone.cellPhoneBrand</td>
+                <td>@cellPhone.cellPhoneModel</td>
+                <td>@cellPhone.price</td>
+            </tr>
+        }
+    </table>
+</div>
